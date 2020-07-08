@@ -1,5 +1,12 @@
 @charset "UTF-8";
-
+/*-----login-------*/
+.naver-btn{
+	position:absolute;
+	top:20%;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+}
 /*-----header------*/
 .header-inner{
 	display:flex;

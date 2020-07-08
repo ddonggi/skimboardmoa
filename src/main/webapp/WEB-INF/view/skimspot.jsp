@@ -1,19 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-</head>
-<body>
+
+
+<main>
 		<h1>위도 : <span id="latitude"></span></h1>
 	<h1>경도 : <span id="longitude"></span></h1>
 	
-	
+
 <script>
 	$(document).ready(function(){
 		
@@ -38,5 +31,4 @@
 		
 	});
 </script>
-</body>
-</html>
+</main>

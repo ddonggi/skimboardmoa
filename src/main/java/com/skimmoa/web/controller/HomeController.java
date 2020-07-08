@@ -19,4 +19,6 @@ public class HomeController {
 	public String skimspot() {
 		return "skimspot";
 	}
+	
+
 }

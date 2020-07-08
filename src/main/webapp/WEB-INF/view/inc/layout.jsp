@@ -1,61 +1,39 @@
 <%@page import="java.util.List"%>
-<%@page import="com.newlecture.web.entity.NoticeView"%>
-<%@page import="com.newlecture.web.service.NoticeService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title><tiles:insertAttribute name="title" ignore="true"/></title>
-    
-    <link href="/css/customer/layout.css" type="text/css" rel="stylesheet" />
-    <link href='<tiles:getAsString name="css"/>' type="text/css" rel="stylesheet" />
-    <style>
-    
-        #visual .content-container{	
-            height:inherit;
-            display:flex; 
-            align-items: center;
-            
-            background: url("../../images/customer/visual.png") no-repeat center;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>SKIMMOA</title>
+<link href="/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="/css/layout.css" type="text/css" rel="stylesheet" />
+<link href="/css/fullpage.css" type="text/css" rel="stylesheet" />
+<link href="/css/style.css" type="text/css" rel="stylesheet" />
+<link href="/css/sidebar.css" type="text/css" rel="stylesheet" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="/js/fullpage.js"></script>
+<script src="/js/sidebar.js"></script>
+<script src="/js/index.js"></script>
+<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.2.js" charset="utf-8"></script>
+
 </head>
 
 <body>
-    <!-- header 부분 -->
+	<div class="content-container">
+		<tiles:insertAttribute name="header" />
 
-    <%-- <jsp:include page="../inc/header.jsp" /> --%>
-    <tiles:insertAttribute name="header" />
+		<tiles:insertAttribute name="aside" />
 
-	<!-- --------------------------- <visual> --------------------------------------- -->
-	<!-- visual 부분 -->
-	
-	<div id="visual">
-		<div class="content-container"></div>
-	</div>
-	<!-- --------------------------- <body> --------------------------------------- -->
-	<div id="body">
-		<div class="content-container clearfix">
+		<tiles:insertAttribute name="main" />
 
-			<!-- --------------------------- aside --------------------------------------- -->
-			<tiles:insertAttribute name="aside" />
-
-			
-			<!-- --------------------------- main --------------------------------------- -->
-			<tiles:insertAttribute name="main" />
-			
-		</div>
-	</div>
-
-    <!-- ------------------- <footer> --------------------------------------- -->
-		<%-- <jsp:include page="../inc/footer.jsp" /> --%>
 		<tiles:insertAttribute name="footer" />
-        
-    </body>
-    
-    </html>
+	</div>
+</body>
+
+</html>
