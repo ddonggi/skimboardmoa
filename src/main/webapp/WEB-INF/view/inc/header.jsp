@@ -12,10 +12,10 @@
 				<div class="weather">날씨API</div>
 				<nav id="account-menu">
 					<ul>
-						<c:if test="${!sessionScope.hasToken}">
+						<c:if test="${sessionId == null}">
 							<li><a href="/login">로그인</a></li>
 						</c:if>
-						<c:if test="${sessionScope.hasToken}">
+						<c:if test="${sessionId != null}">
 							<li><a href="/logout">로그아웃</a></li>
 						</c:if>
 						<li><svg class="cart" width="32" height="32"
