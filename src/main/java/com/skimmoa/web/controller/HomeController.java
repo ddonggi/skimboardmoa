@@ -20,5 +20,16 @@ public class HomeController {
 		return "skimspot";
 	}
 	
-
+	
+	@GetMapping("/aboutskimboard")
+	public String aboutskimboard() {
+		return "aboutskimboard";
+	}
+	
+	
+	@GetMapping("/howtoskimboard")
+	public String howtoskimboard() {
+		return "howtoskimboard";
+	}
+	
 }
